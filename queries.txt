@@ -1,0 +1,7 @@
+Why default region on what basis
+Instance auto-recovery In EC2
+AWS Cost Calculator for Presales
+Pricing for each service
+Cheatsheet for varous AWS Services
+Case study on what kind of services to be used
+-	ML Related
