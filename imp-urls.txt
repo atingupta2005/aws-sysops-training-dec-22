@@ -8,3 +8,8 @@ https://docs.aws.amazon.com/whitepapers/latest/how-aws-pricing-works/aws-cost-op
 
 Support Plans:
 https://aws.amazon.com/premiumsupport/plans/
+
+
+Flow Log Reader Tools:
+https://github.com/obsrvbl/flowlogs-reader
+https://aws.amazon.com/marketplace/pp/prodview-gfnc6tk3mgoi2
