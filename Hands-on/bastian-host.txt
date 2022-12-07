@@ -1,0 +1,5 @@
+wget https://atttrainings.blob.core.windows.net/training-material/ec2loginid.pem
+
+chmod 400 ec2loginid.pem
+
+ssh -i ec2loginid.pem  ec2-user@172.31.154.217

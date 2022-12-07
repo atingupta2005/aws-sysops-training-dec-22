@@ -1,0 +1,22 @@
+- Create S3 Bucket with Versioning enabled.
+- Install Google/MS Authenticator
+- Configure MFA for the Root account
+  - We are going to use this MFA code to enable and disable MFA delete.
+- Once the MFA is configured , Now its time to configure MFA delete on the S3 buckets.
+- Configure root user access keys on AWS CLI just to enable MFA delete
+  - Create access keys for Root user and download the access key
+  - Configure AWS CLI
+    - aws configure --profile root-mfa-delete-demo
+    - aws s3 ls --profile root-mfa-delete-demo
+- Enable MFA Delete on S3
+  -
+- Open AWS CLI
+- Run below command
+
+# aws s3api put-bucket-versioning --bucket <bucket-name> --versioning-configuration Status=Enabled,MFADelete=Enabled --mfa "<arn-of-mfa-device> <mfa-code>"  --profile root-mfa-delete-demo
+
+aws s3api put-bucket-versioning --bucket ag612sdfmslfmd --versioning-configuration Status=Enabled,MFADelete=Enabled --mfa "arn:aws:iam::806391331170:mfa/girj-aws <mfa-code>"  --profile root-mfa-delete-demo
+
+aws s3api list-object-versions --bucket ag612sdfmslfmd  --profile root-mfa-delete-demo
+aws s3api delete-object --bucket <bucket_name> --version-id <version_id> --key <Key/objcet>  --profile root-mfa-delete-demo
+aws s3api delete-object --bucket ag612sdfmslfmd --version-id QtcHUZpk40VopZqEXUcId7Fk4MFOeMIH --key .DS_Store --mfa "arn:aws:iam::806391331170:mfa/girj-aws <6 digit mfa device code>"  --profile root-mfa-delete-demo

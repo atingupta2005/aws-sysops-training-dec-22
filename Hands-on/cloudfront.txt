@@ -1,0 +1,12 @@
+- Create s3 Bucket
+- Upload few files to s3 bucket
+- Create Cloudfront
+- Origin Acces: OACT (Recommended)
+- Click Create Control Settings
+- Set Default root object - index.html
+- Click Copy Policy on Top Right
+- Update Bucket Policy
+- Wait for 10 min
+- Take domain name of CloudFront and open in browser
+- Notice that the files are stored in CloudFront cache and speed is fast to load the files
+- 

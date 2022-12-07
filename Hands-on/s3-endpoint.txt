@@ -1,0 +1,6 @@
+- Create IAM Role ec2 -> s3
+- Assign Role to EC2 instance on Private Subnet
+- Create Endpoint in VPC
+- Connect to EC2 in private n/w via bastian host
+- Run command
+aws s3 ls --region us-east-1

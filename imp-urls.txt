@@ -5,3 +5,6 @@ https://806391331170.signin.aws.amazon.com/console
 
 Cost optimization
 https://docs.aws.amazon.com/whitepapers/latest/how-aws-pricing-works/aws-cost-optimization.html
+
+Support Plans:
+https://aws.amazon.com/premiumsupport/plans/

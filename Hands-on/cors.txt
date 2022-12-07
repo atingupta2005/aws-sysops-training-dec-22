@@ -1,0 +1,57 @@
+- Uncomment the code in index.html
+- Notice code of extra-page.html
+- Upload both files to s3 bucket
+- Take the URL of Static Website and open in browser
+- Notice that extra page is also loaded since origin is same
+- Create another s3 bucket
+  - Unblock public access
+  - Create Bucket and change properties to enable Static Website
+  - Open Permission and change bucket policy
+- Notice all the setup already done using below details:
+  - Bucket names: ag-61222-w1, ag-61222-w2
+  - http://ag-61222-w1.s3-website.us-east-2.amazonaws.com/
+  - http://ag-61222-w2.s3-website.us-east-2.amazonaws.com/extra-page.html
+- Open the website URL:
+   - http://ag-61222-w1.s3-website.us-east-2.amazonaws.com/
+- Notice the CORS error in Browser Console
+- Open the CORS settings in the permissions of bucket - ag-61222-w2
+- Then paste the below CORS settings
+
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::Bucket-Name/*"
+            ]
+        }
+    ]
+}
+
+
+------------------------------
+
+[
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "<url of first bucket with http://...without slash at the end>"
+            // "http://ag-61222-w1.s3-website.us-east-2.amazonaws.com"
+        ],
+        "ExposeHeaders": [],
+        "MaxAgeSeconds": 3000
+    }
+]
