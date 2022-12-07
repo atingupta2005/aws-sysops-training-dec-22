@@ -13,3 +13,7 @@ https://aws.amazon.com/premiumsupport/plans/
 Flow Log Reader Tools:
 https://github.com/obsrvbl/flowlogs-reader
 https://aws.amazon.com/marketplace/pp/prodview-gfnc6tk3mgoi2
+
+
+AWS CLI Documentation
+https://docs.aws.amazon.com/cli/latest/index.html
