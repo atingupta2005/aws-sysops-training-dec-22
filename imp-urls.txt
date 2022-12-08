@@ -20,3 +20,7 @@ https://docs.aws.amazon.com/cli/latest/index.html
 
 AWS CloudFormation Templates
 https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2.html
+
+
+Redis Cheat Sheet
+https://quickref.me/redis
