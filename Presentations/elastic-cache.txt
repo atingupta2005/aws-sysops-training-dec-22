@@ -1,0 +1,3 @@
+Redis uses a single core and shows better performance than Memcached in storing small datasets when measured in terms of cores. Memcached implements a multi-threaded architecture by utilizing multiple cores. Therefore, for storing larger datasets, Memcached can perform better than Redis
+
+Memcached was one of the first popular open source memory caching solutions and works well for basic key value workloads. However, if you are working in the enterprise, or are just looking for a more modern, feature rich and actively developed product, Redis is the best solution.
